@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Landpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        .top-bar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            margin-top: 60px; /* Espaço para a barra superior fixa */
+            padding: 20px;
+        }
+        .section {
+            padding: 20px 0;
+        }
+        #topo {
+            display: block;
+            text-align: right;
+            margin-top: 20px;
+        }
+        #topo a {
+            color: white;
+            background-color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        @media (max-width: 600px) {
+            .top-bar a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="#sobre">Opção 1</a>
+        <a href="#produtos">Opção 2</a>
+        <a href="#contato">Opção 3</a>
+    </div>
+
+    <div class="container">
+        <div id="sobre" class="section">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Meu nome é João Silva, sou um desenvolvedor web com paixão por criar sites funcionais e atraentes. Tenho mais de 10 anos de experiência na área e adoro o que faço.</p>
+        </div>
+
+        <div id="produtos" class="section">
+            <h2>Produtos</h2>
+            <p>Oferecemos uma variedade de produtos para atender às suas necessidades. Desde soluções personalizadas de software até aplicativos móveis inovadores, estamos aqui para ajudar você a alcançar seus objetivos.</p>
+        </div>
+
+        <div id="contato" class="section">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para saber mais sobre nossos serviços e como podemos ajudar você. Email: contato@joaosilva.com | Telefone: (11) 1234-5678</p>
+        </div>
+
+        <div id="topo">
+            <a href="#top">Voltar ao topo</a>
+        </div>
+    </div>
+</body>
+</html>
