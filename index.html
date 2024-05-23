@@ -48,6 +48,12 @@
             padding: 20px;
         }
 
+        .split-section-parent {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
         .split-section {
             display: flex;
             justify-content: space-between;
@@ -56,9 +62,12 @@
             text-align: left;
         }
 
-        .left-content,
+        .left-content {
+            width: 60%;
+        }
+
         .right-content {
-            width: 45%;
+            width: 25%;
         }
 
         .left-content {
@@ -73,6 +82,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 25%;
         }
 
         .left-content img {
@@ -142,14 +152,16 @@
     </div>
 
     <div class="container">
-        <div id="sobre" class="section split-section">
-            <div class="left-content">
-                <h2>JV Imports</h2>
-                <p>Olá! Eu sou o João Vinicios, consultor e vendedor de acessórios para eletrônicos!</p>
-                <img src="img/icon_1_tela_inicial.png" alt="Ícone inicial" class="icone">
-            </div>
-            <div class="right-content">
-                <img src="img/icon_2_headset.png" alt="Imagem fone" class="responsive-img">
+        <div id="sobre" class="section">
+            <div class="split-section-parent">
+                <div class="left-content">
+                    <h1>JV Imports</h1>
+                    <p>Olá! Eu sou o João Vinicios, consultor e vendedor de acessórios para eletrônicos!</p>
+                    <img src="img/icon_1_tela_inicial.png" alt="Ícone inicial" class="icone">
+                </div>
+                <div class="right-content">
+                    <img src="img/icon_2_headset.png" alt="Imagem fone" class="responsive-img">
+                </div>
             </div>
         </div>
 
