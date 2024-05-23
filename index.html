@@ -39,13 +39,47 @@
         }
 
         .section {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 20px;
+        }
+
+        .split-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+        }
+
+        .left-content {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-content {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-content img {
+            width: 150px;
+            height: auto;
+        }
+
+        .right-content img {
+            width: 100%;
+            height: auto;
         }
 
         #topo {
@@ -62,13 +96,35 @@
             text-decoration: none;
             border-radius: 5px;
             margin: 20px;
-
         }
 
         @media (max-width: 600px) {
             .top-bar a {
                 display: block;
                 margin: 10px 0;
+            }
+
+            .split-section {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .left-content,
+            .right-content {
+                width: 100%;
+                text-align: center;
+            }
+
+            .left-content img,
+            .right-content img {
+                width: 80%;
+                height: auto;
+            }
+
+            .icone {
+                width: 100px;
+                height: auto;
+                margin-top: 20px;
             }
         }
     </style>
@@ -83,9 +139,15 @@
     </div>
 
     <div class="container">
-        <div id="sobre" class="section">
-            <h2>Sobre Mim</h2>
-            <p>Olá! Eu sou o João Vinicios, consultor e vendedor de acessórios para eletrônicos!</p>
+        <div id="sobre" class="section split-section">
+            <div class="left-content">
+                <h2>JV Imports</h2>
+                <p>Olá! Eu sou o João Vinicios, consultor e vendedor de acessórios para eletrônicos!</p>
+                <img src="img/icon_1_tela_inicial.png" alt="Ícone inicial" class="icone">
+            </div>
+            <div class="right-content">
+                <img src="img/icon_2_headset.png" alt="Imagem fone" class="responsive-img">
+            </div>
         </div>
 
         <div id="produtos" class="section">
