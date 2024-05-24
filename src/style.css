@@ -150,6 +150,29 @@ h1 {
     transform: scale(1.05);
 }
 
+.product-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-images img {
+    width: 250px;
+    height: auto;
+}
+
+.clientes-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.clientes-image img {
+    width: 450px;
+    height: auto;
+}
+
 @media (max-width: 600px) {
     .top-bar a {
         display: block;
@@ -177,5 +200,15 @@ h1 {
         width: 100px;
         height: auto;
         margin-top: 20px;
+    }
+
+    .product-images {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .clientes-image {
+        flex-direction: column;
+        gap: 10px;
     }
 }
