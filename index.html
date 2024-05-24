@@ -33,6 +33,36 @@
             text-decoration: none;
         }
 
+        .top-bar a:hover{
+            color: #9a9090;
+        }
+
+        #left-content, h1{
+            font-size: 70px;
+
+        }
+        .right-content{
+            animation: swingImage 6s ease-in-out 2;
+            animation-fill-mode: forwards;
+        }
+        @keyframes swingImage {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(15deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+      75% {
+        transform: rotate(-15deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
         .container {
             margin-top: 60px;
             padding: 0;
@@ -110,6 +140,16 @@
             border-radius: 5px;
             margin: 20px;
         }
+        .icone {
+            width: 100px;
+            margin-top: 3rem;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+       .icone:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05); 
+       }
 
         @media (max-width: 600px) {
             .top-bar a {
@@ -157,7 +197,9 @@
                 <div class="left-content">
                     <h1>JV Imports</h1>
                     <p>Olá! Eu sou o João Vinicios, consultor e vendedor de acessórios para eletrônicos!</p>
-                    <img src="img/icon_1_tela_inicial.png" alt="Ícone inicial" class="icone">
+                    <a href="https://wa.me/55319714925400?text=Olá%2C%20tenho%20uma%20dúvida!">
+                        <img src="img/icon_3_botaowhatsapp.png" alt="Ícone inicial" class="icone">
+                    </a>
                 </div>
                 <div class="right-content">
                     <img src="img/icon_2_headset.png" alt="Imagem fone" class="responsive-img">
