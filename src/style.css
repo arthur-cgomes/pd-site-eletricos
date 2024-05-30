@@ -35,7 +35,7 @@ h1 {
 }
 
 .right-content {
-    animation: swingImage 6s ease-in-out 2;
+    animation: swingImage 6s ease-in-out 1;
     animation-fill-mode: forwards;
 }
 
@@ -45,7 +45,7 @@ h1 {
     }
 
     25% {
-        transform: rotate(15deg);
+        transform: rotate(5deg);
     }
 
     50% {
@@ -53,7 +53,7 @@ h1 {
     }
 
     75% {
-        transform: rotate(-15deg);
+        transform: rotate(0deg);
     }
 
     100% {
@@ -123,6 +123,17 @@ h1 {
     height: auto;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
 #topo {
     display: block;
     text-align: right;
@@ -173,6 +184,29 @@ h1 {
     height: auto;
 }
 
+.botao-contato {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    background-image: url('img/icon_1_botao_tela_inicial.png');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.botao-contato:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 600px) {
     .top-bar a {
         display: block;
@@ -211,4 +245,15 @@ h1 {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('font/Montserrat-Arabic Regular 400.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
 }
