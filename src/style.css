@@ -4,7 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: white;
-    background: linear-gradient(90deg, #ff3131, #ff914d);
+    background: linear-gradient(90deg, #1E07AF, #437BFF);
     background-attachment: fixed;
 }
 
@@ -12,7 +12,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(90deg, #ff3131, #ff914d);
+    background: linear-gradient(90deg, #1E07AF, #437BFF);
     color: white;
     text-align: center;
     padding: 10px 0;
