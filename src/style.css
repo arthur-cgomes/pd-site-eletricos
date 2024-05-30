@@ -83,8 +83,9 @@ h1 {
     text-align: left;
 }
 
-.text-content {
-    flex: 1;
+.text-product {
+    text-align: center;
+    flex: 1.5;
     padding-right: 20px;
 }
 
