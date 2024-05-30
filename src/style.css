@@ -92,30 +92,25 @@ h1 {
 
 .left-content {
     width: 60%;
-}
-
-.right-content {
-    width: 25%;
-}
-
-.left-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0;
 }
 
 .right-content {
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
 }
 
 .left-content img {
     width: 150px;
     height: auto;
+    margin-bottom: 0;
 }
 
 .right-content img {
@@ -129,9 +124,16 @@ h1 {
 }
 
 .logo {
-    width: 200px;
+    width: 400px !important;
     max-width: 100%;
     height: auto;
+    margin-bottom: 0;
+}
+
+.left-content h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 #topo {
@@ -185,6 +187,7 @@ h1 {
 }
 
 .botao-contato {
+    margin-top: 37px;
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -205,6 +208,38 @@ h1 {
 
 .botao-contato:hover {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+#contato .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+#contato .contact-info {
+    flex: 1;
+    text-align: center;
+}
+
+#contato .social-media {
+    flex: 1;
+    text-align: right;
+}
+
+#contato .social-media a {
+    margin: 0 10px;
+}
+
+.icon {
+    width: 100px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
 
 @media (max-width: 600px) {
