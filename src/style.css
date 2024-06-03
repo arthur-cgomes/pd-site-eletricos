@@ -84,7 +84,7 @@ h1 {
 }
 
 .text-product {
-    text-align: center;
+    text-align: left;
     flex: 1.5;
     padding-right: 20px;
 }
@@ -230,20 +230,38 @@ h1 {
 
 #contato .contact-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
 }
 
-#contato .contact-info {
+#contato .contact-content {
     flex: 1;
-    text-align: center;
+    text-align: left;
+    max-width: 50%;
 }
 
-#contato .social-media {
+#contato .contact-map-placeholder {
     flex: 1;
-    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+#contato .contact-map {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 15px;
+    border: none;
+}
+
+#contato h2,
+#contato h3 {
+    margin: 0 0 10px 0;
 }
 
 #contato .social-media a {
@@ -251,7 +269,8 @@ h1 {
 }
 
 .icon {
-    width: 100px;
+    width: 50px;
+    height: auto;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -266,37 +285,28 @@ h1 {
         margin: 10px 0;
     }
 
-    .split-section {
+    #contato .contact-container {
         flex-direction: column;
-        height: auto;
+        align-items: flex-start;
     }
 
-    .left-content,
-    .right-content {
+    #contato .contact-content {
         width: 100%;
         text-align: center;
     }
 
-    .left-content img,
-    .right-content img {
-        width: 80%;
-        height: auto;
-    }
-
-    .icone {
-        width: 100px;
-        height: auto;
+    #contato .contact-map-placeholder {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 20px;
     }
 
-    .product-images {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .clientes-image {
-        flex-direction: column;
-        gap: 10px;
+    #contato .contact-map {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
     }
 }
 
@@ -309,4 +319,57 @@ h1 {
 
 body {
     font-family: 'Montserrat', sans-serif;
+}
+
+.product-carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+    display: flex;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 600px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }

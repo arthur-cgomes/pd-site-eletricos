@@ -39,12 +39,20 @@
             <div class="text-product">
                 <h2>Produtos</h2>
                 <p>Oferecemos uma variedade de produtos para atender às suas necessidades. Desde soluções personalizadas
-                    de
-                    software até aplicativos móveis inovadores, estamos aqui para ajudar você a alcançar seus objetivos.
+                    de software até aplicativos móveis inovadores, estamos aqui para ajudar você a alcançar seus
+                    objetivos.
                 </p>
             </div>
-            <div class="product-images">
-                <img src="img/icon_4_sombra_quadrada.png" alt="Imagem moldura" class="responsive-img">
+            <div class="product-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="img/img_cell.png" alt="Imagem 1">
+                        <img src="img/img_fone.png" alt="Imagem 2">
+                        <img src="img/img_smart.png" alt="Imagem 3">
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </div>
     </div>
@@ -60,17 +68,27 @@
     </div>
 
     <div id="contato" class="section">
-        <h2>Entre em contato</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Endereço: Somos de Itabira-MG</h3>
+        <div class="contact-container">
+            <div class="contact-content">
+                <h2>Entre em contato com a gente!</h2>
+                <div class="contact-info">
+                    <h3>Somos de Itabira-MG</h3>
+                </div>
+                <div class="social-media">
+                    <h3>Também estamos nas redes sociais!</h3>
+                    <a href="https://www.facebook.com/joao.viniciow?mibextid=LQQJ4d"><img src="img/icone_6_facebook.png"
+                            alt="Facebook" class="icon"></a>
+                    <a href="https://www.instagram.com/joao.viniciow?igsh=MWRkMHo2MGUwMnZkOA=="><img
+                            src="img/icone_7_instagram.png" alt="Instagram" class="icon"></a>
+                    <a href="https://wa.me/55319714925400?text=Olá%2C%20tenho%20uma%20dúvida!"><img
+                            src="img/icone_8_whatsapp.png" alt="WhatsApp" class="icon"></a>
+                </div>
             </div>
-            <div class="social-media">
-                <h3>Também estamos nas redes sociais!</h3>
-                <a href="https://www.google.com.br"><img src="img/icone_6_facebook.png" alt="Facebook" class="icon"></a>
-                <a href="https://www.google.com.br"><img src="img/icone_7_instagram.png" alt="Instagram"
-                        class="icon"></a>
-                <a href="https://www.google.com.br"><img src="img/icone_8_whatsapp.png" alt="WhatsApp" class="icon"></a>
+            <div class="contact-map-placeholder">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.51120516112!2d-44.30708768440452!3d-19.62395598679605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaaa8d928eebcb233%3A0x49b11b4777a77102!2sItabira%2C%20MG%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1680100026393!5m2!1spt-BR!2sus"
+                    class="contact-map" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
@@ -78,6 +96,8 @@
     <div id="topo">
         <a href="#top">Voltar ao topo</a>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
