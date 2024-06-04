@@ -373,3 +373,56 @@ body {
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+.clientes-carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clientes-carousel .carousel-container {
+    display: flex;
+}
+
+.clientes-carousel .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.clientes-carousel .carousel-slide img {
+    width: 600px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.clientes-carousel .prev,
+.clientes-carousel .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.clientes-carousel .prev {
+    left: 0;
+}
+
+.clientes-carousel .next {
+    right: 0;
+}
+
+.clientes-carousel .prev:hover,
+.clientes-carousel .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
