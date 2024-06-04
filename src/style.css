@@ -107,6 +107,8 @@ h1 {
     text-align: left;
     flex: 1.5;
     padding-right: 20px;
+    margin-left: 50px;
+    font-size: 20px;
 }
 
 .product-images {
@@ -338,6 +340,7 @@ h1 {
     position: relative;
     max-width: 600px;
     margin: auto;
+    margin-right: 50px;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
