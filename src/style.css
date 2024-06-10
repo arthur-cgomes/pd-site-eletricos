@@ -290,6 +290,36 @@ h1 {
     margin: 0 10px;
 }
 
+.clientes-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+}
+
+.clientes-section .clientes-carousel {
+    flex: 1;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clientes-section .text-client {
+    flex: 1;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.clientes-section .clientes-carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .site-icon {
     width: 100px;
     height: auto;
@@ -339,6 +369,16 @@ h1 {
         max-width: 100%;
         height: auto;
         border-radius: 15px;
+    }
+
+    .clientes-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .clientes-section .text-client {
+        padding-left: 0;
+        margin-top: 20px;
     }
 }
 
