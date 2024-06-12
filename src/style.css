@@ -12,15 +12,54 @@
     font-style: normal;
 }
 
+*{
+    scroll-behavior: smooth;
+}::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+  }
+  
+  /* Estilos para a barra de rolagem em rolagem */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor do indicador de rolagem */
+    border-radius: 6px; /* Arredondamento do indicador de rolagem */
+  }
+  
+  /* Estilos para a barra de rolagem de rolagem quando hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor do indicador de rolagem em hover */
+  }
+  
+  /* Estilos para a barra de rolagem de trilha */
+  ::-webkit-scrollbar-track {
+    background: #7777; /* Cor da trilha da barra de rolagem */
+    border-radius: 10px; /* Arredondamento da trilha da barra de rolagem */
+  }
+  
+  /* Estilos para a barra de rolagem de trilha em rolagem */
+  ::-webkit-scrollbar-track:hover {
+    background:transparent; /* Cor da trilha da barra de rolagem em hover */
+  }
+
 body {
     font-family: 'MontserratLight', sans-serif;
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     color: white;
     background: linear-gradient(90deg, #1E07AF, #437BFF);
     background-attachment: fixed;
+    overflow-x: hidden;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @media (max-width: 800px) {
+        padding-top: 200px;
+    }
+
 }
+
+
 
 .top-bar {
     position: fixed;
@@ -31,6 +70,7 @@ body {
     text-align: center;
     padding: 10px 0;
     z-index: 1000;
+    left: 0;
 }
 
 .top-bar a {
@@ -55,7 +95,7 @@ h1 {
 }
 
 .right-content {
-    animation: swingImage 6s ease-in-out 1;
+    animation: swingImage 6s linear infinite;
     animation-fill-mode: forwards;
 }
 
@@ -65,15 +105,15 @@ h1 {
     }
 
     25% {
-        transform: rotate(5deg);
+        transform: rotate(3deg);
     }
 
-    50% {
-        transform: rotate(0deg);
+    50%{
+        transform: rotate(6deg);
     }
 
     75% {
-        transform: rotate(0deg);
+        transform: rotate(3deg);
     }
 
     100% {
@@ -81,33 +121,42 @@ h1 {
     }
 }
 
-.container {
-    margin-top: 60px;
-    padding: 0;
-}
+
 
 .section {
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
     align-items: center;
-    text-align: center;
-    padding: 20px;
+     height: 100vh;
+     justify-content: center;
+     column-gap: 100px;
+    @media(max-width: 800px){
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 40px;
+        height: auto;
+    }
 }
 
-.content-wrapper {
+footer{
     display: flex;
-    justify-content: center;
+    width: 100%;
     align-items: center;
-    text-align: left;
+     height: auto;
+     justify-content: center;
+     column-gap: 100px;
+    @media(max-width: 800px){
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 40px;
+        height: auto;
+    }
 }
 
 .text-product {
     text-align: left;
     flex: 1.5;
     padding-right: 20px;
-    margin-left: 50px;
     font-size: 20px;
 }
 
@@ -116,11 +165,7 @@ h1 {
     text-align: center;
 }
 
-.split-section-parent {
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
+
 
 .split-section {
     display: flex;
@@ -131,7 +176,7 @@ h1 {
 }
 
 .left-content {
-    width: 60%;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,6 +201,9 @@ h1 {
 .right-content img {
     width: 100%;
     height: auto;
+    @media(max-width: 800px){
+        width: 40vw;
+    }
 }
 
 .logo-container {
@@ -222,7 +270,7 @@ h1 {
 }
 
 .clientes-image img {
-    width: 450px;
+    width: 100%;
     height: auto;
 }
 
@@ -261,7 +309,6 @@ h1 {
 #contato .contact-content {
     flex: 1;
     text-align: center;
-    max-width: 50%;
 }
 
 #contato .contact-map-placeholder {
@@ -269,7 +316,14 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 50%;
+}
+.contact-map-placeholder iframe{
+    width: 100%;
+    height: 450px;
+    @media(max-width: 800px){
+        width: 100%;
+        height: 300px;
+    }
 }
 
 #contato .contact-map {
@@ -290,28 +344,13 @@ h1 {
     margin: 0 10px;
 }
 
-.clientes-section {
+.social-logos{
     display: flex;
     align-items: center;
+    gap: 10px;
     justify-content: center;
-    flex-direction: row;
-    padding: 20px;
-    gap: 20px;
 }
 
-.clientes-section .clientes-carousel {
-    flex: 1;
-    margin-left: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.clientes-section .text-client {
-    flex: 1;
-    text-align: left;
-    padding-left: 30px;
-}
 
 .clientes-section .clientes-carousel img {
     width: 100%;
@@ -384,12 +423,14 @@ h1 {
 
 .product-carousel {
     position: relative;
-    max-width: 600px;
+    width: 40vw;
     margin: auto;
     margin-right: 50px;
-    overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    @media(max-width: 800px){
+        width: 80vw; 
+    }
 }
 
 .carousel-container {
@@ -402,7 +443,7 @@ h1 {
 }
 
 .carousel-slide img {
-    width: 600px;
+    width: 100%;
     height: auto;
     border-radius: 15px;
 }
@@ -442,11 +483,18 @@ h1 {
 
 .clientes-carousel {
     position: relative;
-    max-width: 600px;
-    margin-top: 20px;
-    overflow: hidden;
+    width: 40vw;
     border-radius: 15px;
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    @media(max-width: 800px){
+        width: 80vw; 
+    }
+}
+.column-reverse{
+    @media(max-width: 800px){
+        flex-direction: column !important;
+    }
 }
 
 .clientes-carousel .carousel-container {
@@ -459,7 +507,7 @@ h1 {
 }
 
 .clientes-carousel .carousel-slide img {
-    width: 600px;
+    width: 100%;
     height: auto;
     border-radius: 15px;
 }
@@ -493,10 +541,3 @@ h1 {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.text-client {
-    text-align: left;
-    flex: 1.5;
-    padding-right: 20px;
-    margin-left: 50px;
-    font-size: 20px;
-}
