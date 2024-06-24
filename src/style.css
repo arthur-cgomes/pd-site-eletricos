@@ -438,6 +438,21 @@ footer {
     }
 }
 
+.clientes-carousel {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: auto;
+
+    @media(max-width: 800px) {
+        width: 80vw;
+        height: 80vw;
+    }
+}
+
 .carousel-container {
     display: flex;
 }
@@ -484,18 +499,6 @@ footer {
 
 #clientes p {
     margin-bottom: 10px;
-}
-
-.clientes-carousel {
-    position: relative;
-    width: 40vw;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-    @media(max-width: 800px) {
-        width: 80vw;
-    }
 }
 
 .column-reverse {

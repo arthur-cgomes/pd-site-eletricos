@@ -36,8 +36,5 @@ function showClientesSlides(n) {
         clientesSlides[i].style.display = 'none';
     }
 
-    for (let i = 0; i < 3; i++) {
-        const index = (clientesSlideIndex + i) % totalClientesSlides;
-        clientesSlides[index].style.display = 'block';
-    }
+    clientesSlides[clientesSlideIndex].style.display = 'block';
 }
