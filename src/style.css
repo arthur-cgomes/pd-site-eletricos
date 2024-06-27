@@ -58,8 +58,6 @@ body {
 
 }
 
-
-
 .top-bar {
     position: fixed;
     top: 0;
@@ -120,8 +118,6 @@ h1 {
     }
 }
 
-
-
 .section {
     display: flex;
     width: 100%;
@@ -165,8 +161,6 @@ footer {
     flex: 1;
     text-align: center;
 }
-
-
 
 .split-section {
     display: flex;
@@ -354,7 +348,6 @@ footer {
     gap: 10px;
     justify-content: center;
 }
-
 
 .clientes-section .clientes-carousel img {
     width: 100%;
